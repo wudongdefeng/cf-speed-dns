@@ -4,7 +4,7 @@ import time
 import os
 import json
 
-# API 密钥
+# API 密钥 
 CF_API_TOKEN    =   os.environ["CF_API_TOKEN"]
 CF_ZONE_ID      =   os.environ["CF_ZONE_ID"]
 CF_DNS_NAME     =   os.environ["CF_DNS_NAME"]
@@ -93,9 +93,9 @@ def main():
     for index, ip_address in enumerate(ip_addresses):
         # 执行 DNS 变更
         dns = update_dns_record(dns_records[index], CF_DNS_NAME, ip_address)
-        push_plus_content.append(dns)
+        #push_plus_content.append(dns)
 
-    push_plus('\n'.join(push_plus_content))
+    #push_plus('\n'.join(push_plus_content))
 
 if __name__ == '__main__':
     main()
